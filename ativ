@@ -1,0 +1,111 @@
+1-
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner ler = new Scanner(System.in);
+    int nota;
+    System.out.println("Digite uma nota de 0 a 10");
+    nota = ler.nextInt();
+    while(nota < 0 || nota > 10){
+      System.out.println("Nota inválida, digite novamente");
+      nota = ler.nextInt();
+    }
+  }
+}
+
+2-
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Digite seu nome de usuário: ");
+    String usuario = input.nextLine();
+    System.out.println("Digite sua senha: ");
+    String senha = input.nextLine();
+    while (usuario.equals(senha)) {
+      System.out.println("Senha inválida, digite novamente: ");
+      senha = input.nextLine();
+    }
+    System.out.println("Senha válida!");
+  }
+}
+
+3-
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String nome, sexo, estadoCivil;
+    int idade;
+    double salario;
+    boolean validacao = false;
+
+    while(!validacao){
+      System.out.println("Digite seu nome: ");
+      nome = input.nextLine();
+      if(nome.length() > 3){
+        validacao = true;
+      }else{
+        System.out.println("Nome inválido");
+      }
+    }
+    validacao = false;
+    while(!validacao){
+      System.out.println("Digite sua idade: ");
+      idade = input.nextInt();
+      if(idade >= 0 && idade <= 150){
+        validacao = true;
+      }else{
+        System.out.println("Idade inválida");
+      }
+    }
+    validacao = false;
+    while(!validacao){
+      System.out.println("Digete seu salário: ");
+      salario = input.nextDouble();
+      if(salario > 0){
+        validacao = true;
+      }else{
+        System.out.println("Salário inválido");
+      }
+    }
+    validacao = false;
+    while(!validacao){
+      System.out.println("Digite seu sexo: ");
+      sexo = input.nextLine();
+      if(sexo.equals("f") || sexo.equals("m")){
+        validacao = true;
+      }else{
+        System.out.println("Sexo inválido");
+      }
+    }
+    validacao = false;
+    while(!validacao){
+      System.out.println("Digite seu estado civil: ");
+      estadoCivil = input.nextLine();
+      if(estadoCivil.equals("s") || estadoCivil.equals("c") || estadoCivil.equals("v") || estadoCivil.equals("d")){
+        validacao = true;
+      }else{
+        System.out.println("Estado civil inválido");
+      }
+    }
+  }
+}
+
+7-
+import java.util.Scanner;
+public class Main{
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int num, maior = 0;
+    for (int i = 0; i < 5; i++) {
+      System.out.print("Digite um número: ");
+      num = input.nextInt();
+      if (num > maior) {
+        maior = num;
+      }
+    }
+    System.out.println("O maior número é: " + maior);
+  }
+}
+ 
